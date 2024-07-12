@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+    <div class="row mt-5">
+        <div class="col-12 text-center">
+            <h1>Que souhaitez-vous rechercher ?</h1>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <form method="get" action="https://www.google.com/search">
+            <div class="form-group">
+                <input type="text" class="form-control rounded-5 w-75 m-auto shadow border-0 pl-5 small" placeholder="Rechercher sur Google" name="q">
+            </div>
+        </form>
+    </div>
+{% endblock %}
