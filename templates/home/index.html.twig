@@ -3,15 +3,48 @@
 
 {% block body %}
     <div class="row mt-5">
-        <div class="col-12 text-center">
-            <h1>Que souhaitez-vous rechercher ?</h1>
+        <div class="col-12 text-left">
+                <h1 class="text-no-color">Hello, <span class="text-primary-100">Maxime</span></h1>
+                <h3 class="text-no-color">Que souhaitez-vous rechercher ?</h3>
         </div>
     </div>
+
     <div class="row mt-5">
-        <form method="get" action="https://www.google.com/search">
+        <form method="get" action="https://www.google.com/search" class="search">
             <div class="form-group">
-                <input type="text" class="form-control rounded-5 w-75 m-auto shadow border-0 pl-5 small" placeholder="Rechercher sur le net" name="q">
+                <input type="text" class="form-control" placeholder="Rechercher sur le net" name="q">
             </div>
         </form>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-4 mt-2">
+            <h4>Applications locales</h4>
+            <div class="app-grid">
+                <a href="http://192.168.1.1" class="app-link">
+                    <img src="{{ asset('images/logo_orange.png') }}" alt="App 1">
+                    <span>Livebox</span>
+                </a>
+                <a href="http://192.168.0.1" class="app-link">
+                    <img src="{{ asset('images/logo_tplink.png') }}" alt="App 2">
+                    <span>Router</span>
+                </a>
+                <a href="http://192.168.0.245/admin/login.php" class="app-link">
+                    <img src="{{ asset('images/logo_pihole.png') }}" alt="App 3">
+                    <span>Pi-hole</span>
+                </a>
+                <a href="http://192.168.0.233:5000/#/signin" class="app-link">
+                    <img src="{{ asset('images/logo_synology.png') }}" alt="App 4">
+                    <span>Synology</span>
+                </a>
+                <a href="http://192.168.0.233:32400/web/index.html#!/" class="app-link">
+                    <img src="{{ asset('images/logo_plex.png') }}" alt="App 5">
+                    <span>Plex</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 mt-2">
+            <h4>Liens favoris</h4>
+        </div>
     </div>
 {% endblock %}

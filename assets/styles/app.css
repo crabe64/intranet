@@ -1,3 +1,137 @@
+:root {
+
+    /** CSS DARK THEME PRIMARY COLORS */
+    --color-primary-100 : #e91e63;
+    --color-primary-200:  #ef4873;
+    --color-primary-300:  #f46583;
+    --color-primary-400:  #f97d93;
+    --color-primary-500:  #fd94a4;
+    --color-primary-600:  #ffaab6;
+
+    /** CSS DARK THEME SURFACE COLORS */
+    --color-surface-100:  #121212; /* For body background color */
+    --color-surface-200:  #282828; /* For cards background color */
+    --color-surface-300:  #3f3f3f; /* For chips buttons, dropdowns background color */
+    --color-surface-400:  #575757; /* For sidebars, navbar background color */
+    --color-surface-500:  #717171; /* For modal, dialogs background color */
+    --color-surface-600:  #8b8b8b; /* For on background texts color */
+
+    /** CSS DARK THEME MIXED SURFACE COLORS */
+    --color-surface-mixed-100:  #26181a; /* For body background color */
+    --color-surface-mixed-200:  #3b2d2f; /* For cards background color */
+    --color-surface-mixed-300:  #514445; /* For chips buttons, dropdowns background color */
+    --color-surface-mixed-400:  #675c5d; /* For sidebars, navbar background color */
+    --color-surface-mixed-500:  #7f7576; /* For modal, dialogs background color */
+    --color-surface-mixed-600:  #978f90; /* For on background texts color */
+
+    /** FONT-SIZE */
+    font-size: 18px;
+}
+
+/**
+    ********************************
+    * BODY *
+    ********************************
+ */
+
 body {
-    background-color: skyblue;
+    background-color: var(--color-surface-100);
+    color: var(--color-surface-600);
+}
+
+/**
+    ********************************
+    * Text, fonts, and typography *
+    ********************************
+ */
+
+h1, h2, h3 {
+    color: var(--color-primary-100);
+    font-weight: 700;
+}
+h4, h5, h6 {
+    color: var(--color-primary-400);
+    font-weight: 700;
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.75rem;
+}
+h4 {
+    font-size: 1.5rem;
+}
+.text-primary-100 {
+    color: var(--color-primary-100);
+}
+.text-muted {
+    color: var(--color-surface-400);
+}
+.text-no-color {
+    color: var(--color-surface-600);
+}
+
+/**
+    ********************************
+    * Forms  *
+    ********************************
+ */
+.search input[type="text"] {
+    background-color: var(--color-surface-500);
+    box-shadow: var(--color-surface-300) 0px 2px 8px 0px;
+    color: var(--color-surface-100);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 40px;
+    width: 100%;
+    transition: .3s;
+}
+.search input[type="text"]:focus {
+    background-color: var(--color-surface-600);
+    box-shadow: var(--color-surface-300) 0px 5px 15px;
+    padding: 10px 60px;
+    width: 100%;
+}
+
+
+
+
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+}
+.app-link {
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-surface-600);
+    font-weight: bold;
+    transition: .3s;
+}
+.app-link:hover {
+    color: var(--color-primary-100);
+}
+.app-link img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: .3s;
+}
+
+.app-link img:hover {
+    transform: rotate(-10deg);
+}
+.app-link span {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
 }
