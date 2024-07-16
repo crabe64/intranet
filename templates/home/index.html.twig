@@ -4,7 +4,7 @@
 {% block body %}
     <div class="row mt-5">
         <div class="col-12 text-left">
-                <h1 class="text-no-color">Hello, <span class="text-primary-100">Maxime</span></h1>
+                <h1 class="text-no-color">Hello, <span class="text-primary-100">{{ app.user.name }}</span></h1>
                 <h3 class="text-no-color">Que souhaitez-vous rechercher ?</h3>
         </div>
     </div>
@@ -44,7 +44,10 @@
             </div>
         </div>
         <div class="col-md-4 mt-2">
-            <h4>Liens favoris</h4>
+            <div class="d-flex justify-content-between">
+                <h4>Liens favoris</h4>
+                <a href="#" class="btn btn-success btn-sm d-block">Ajouter</a>
+            </div>
         </div>
     </div>
 {% endblock %}

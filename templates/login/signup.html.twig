@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+    <div class="row mt-5">
+        <div class="col-12 text-left">
+            <h1 class="text-no-color">Inscription</h1>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-6 offset-md-3">
+            {{ form(form) }}
+        </div>
+    </div>
+{% endblock %}
