@@ -46,7 +46,15 @@
         <div class="col-md-4 mt-2">
             <div class="d-flex justify-content-between">
                 <h4>Liens favoris</h4>
-                <a href="#" class="btn btn-success btn-sm d-block">Ajouter</a>
+                <a href="{{ path('bookmark_add') }}" class="btn btn-success btn-sm d-block">Ajouter</a>
+            </div>
+            <div class="d-block">
+                {% for bookmark in bookmarks %}
+                    <a href="{{ bookmark.url }}" class="bookmark">
+                        <span>{{ bookmark.label }}</span>
+                        <small>{{ bookmark.url }}</small>
+                    </a>
+                {% endfor %}
             </div>
         </div>
     </div>
